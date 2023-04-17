@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title> Cấu hình</title>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+</head>
+<body>
+
+<br>
+<br>
+<div class = "container">
+  <div class = "row">
+    <div class ="col-lg-6 col-md-6 col-sm-6 container justify-content-center card">
+      <h1 class = "text-center"> Update Config </h1>
+      <div class = "card-body">
+        <form th:action="@{/customers/home/config}" th:object = "${config}" method="POST">
+          <div class ="form-group">
+            <label> Lương cơ sở </label>
+            <input
+                    type = "text"
+                    name = "salary"
+                    th:field = "*{salary}"
+                    class = "form-control"
+                    placeholder="Enter Student First Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của người lao động theo mức lương được hưởng </label>
+            <input
+                    type = "text"
+                    name = "worker"
+                    th:field = "*{worker}"
+                    class = "form-control"
+                    placeholder="Enter Student Last Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của người hưởng lương hưu, trợ cấp mất sức lao động </label>
+            <input
+                    type = "text"
+                    name = "retirement"
+                    th:field = "*{retirement}"
+                    class = "form-control"
+                    placeholder="Enter Student Email"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của người trong chế độ nghỉ thai sản trước khi nghỉ </label>
+            <input
+                    type = "text"
+                    name = "maternity"
+                    th:field = "*{maternity}"
+                    class = "form-control"
+                    placeholder="Enter Student First Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của người hưởng trợ cấp thất nghiệp </label>
+            <input
+                    type = "text"
+                    name = "unemployment"
+                    th:field = "*{unemployment}"
+                    class = "form-control"
+                    placeholder="Enter Student Last Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của các đối tượng khác </label>
+            <input
+                    type = "text"
+                    name = "other"
+                    th:field = "*{other}"
+                    class = "form-control"
+                    placeholder="Enter Student Email"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của người thứ 1 trong hộ gia đình so với mức lương cơ sở </label>
+            <input
+                    type = "text"
+                    name = "familyOne"
+                    th:field = "*{familyOne}"
+                    class = "form-control"
+                    placeholder="Enter Student First Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của người thứ 2 trong hộ gia đình so với người thứ 1 </label>
+            <input
+                    type = "text"
+                    name = "familyTwo"
+                    th:field = "*{familyTwo}"
+                    class = "form-control"
+                    placeholder="Enter Student Last Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của người thứ 3 trong hộ gia đình so với người thứ 1 </label>
+            <input
+                    type = "text"
+                    name = "familyThree"
+                    th:field = "*{familyThree}"
+                    class = "form-control"
+                    placeholder="Enter Student Email"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của người thứ 4 trong hộ gia đình so với người thứ 1 </label>
+            <input
+                    type = "text"
+                    name = "familyFour"
+                    th:field = "*{familyFour}"
+                    class = "form-control"
+                    placeholder="Enter Student First Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức đóng của người thứ 5 trở đi trong hộ gia đình so với người thứ 1 </label>
+            <input
+                    type = "text"
+                    name = "familyFive"
+                    th:field = "*{familyFive}"
+                    class = "form-control"
+                    placeholder="Enter Student Last Name"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức hỗ trợ đối với hộ nghèo ở huyện nghèo </label>
+            <input
+                    type = "text"
+                    name = "familyThree"
+                    th:field = "*{poor}"
+                    class = "form-control"
+                    placeholder="Enter Student Email"
+            />
+          </div>
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức hỗ trợ đối với hộ cận nghèo </label>
+            <input
+                    type = "text"
+                    name = "familyFour"
+                    th:field = "*{nearPoor}"
+                    class = "form-control"
+                    placeholder="Enter Student First Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức hỗ trợ đối với học sinh, sinh viên </label>
+            <input
+                    type = "text"
+                    name = "familyFive"
+                    th:field = "*{student}"
+                    class = "form-control"
+                    placeholder="Enter Student Last Name"
+            />
+          </div>
+
+          <div class ="form-group">
+            <label> Tỉ lệ phần trăm mức hỗ trợ đối với người thuộc hộ gia đình nông-lâm-ngư-diêm nghiêp</label>
+            <input
+                    type = "text"
+                    name = "farmer"
+                    th:field = "*{farmer}"
+                    class = "form-control"
+                    placeholder="Enter Student Email"
+            />
+          </div>
+
+          <div class = "box-footer">
+            <button type="submit" class = "btn btn-primary">
+              Submit
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
