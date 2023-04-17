@@ -188,12 +188,14 @@ body {
     background-color: white;
     margin: 5px 10px;
     height: 100%;
+    font-style: oblique;
 }
 .nav-brand{
     color: white;
     background-color: black;
     margin: 5px 10px;
     height: 100%;
+    font-style: oblique;
 }
 
 /*--------------------------*/

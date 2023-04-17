@@ -19,6 +19,7 @@
 </nav>
 <div class="report_info">
   <h1 style="text-align: center;background-color: white;width: 100%;">BÁO CÁO</h1>
+  <a class="nav-brand" th:href="@{/customers/home/report}"style="width: 6%;font-size: 16px;text-align: center"> BACK </a>
   <div style="width: 45%;">
     <span class="report_info_end">Bộ lọc thời gian</span>
     <div class="report_info_start">
@@ -115,6 +116,7 @@
     <th> Địa chỉ </th>
     <th> Ngày tham gia </th>
     <th> Ngày kết thúc </th>
+    <th> Phương thức đóng phí</th>
     <th> Phí bảo hiểm </th>
     <th> Ghi chú </th>
   </tr>
@@ -129,6 +131,7 @@
     <td th:text = "${cus.getHome() +', '+ cus.getWard() +', '+ cus.getDistrict() +', '+ cus.getProvince()}"></td>
     <td th:text = "${cus.dateStart}"></td>
     <td th:text = "${cus.dateEnd}"></td>
+    <td th:text = "${cus.method}"></td>
     <td th:text = "${cus.price}"></td>
     <td th:text = "${cus.note}"></td>
   </tr>

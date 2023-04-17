@@ -76,9 +76,16 @@ public class CustomerController {
         model.addAttribute("data", data);
         return "report_not_complete";
     }
-    @GetMapping("/customers/home/viewlist")
-    public String listAllCustomers(Model model) {
-        model.addAttribute("listCustomers", customerService.getAllCustomer());
+    @PostMapping("/customers/home/viewlist")
+    public String listCustomers(@ModelAttribute("data") Data data,Model model) {
+        model.addAttribute("listCustomers", customerService.getAllCustomer(data));
         return "customers";
     }
+    @GetMapping("/customers/home/viewlist")
+    public String viewlist(Model model) {
+        Data data = new Data();
+        model.addAttribute("data", data);
+        return "customers";
+    }
+
 }

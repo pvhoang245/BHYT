@@ -64,7 +64,20 @@ public class CustomerImpl implements CustomerService {
         }
     }
     @Override
-    public List<Customer> getAllCustomer() {
-        return customerRepository.findAll();
+    public List<Customer> getAllCustomer(Data data) {
+        System.out.println(data.getProvince());
+        System.out.println(data.getDistrict());
+        System.out.println(data.getWard());
+        System.out.println(data.getDateStart());
+        System.out.println(data.getDateEnd());
+        if (data.getProvince() == "") {
+            return customerRepository.getAll0(data.getDateStart(), data.getDateEnd());
+        } else if (data.getDistrict() == "") {
+            return customerRepository.getAll1(data.getProvince(), data.getDateStart(), data.getDateEnd());
+        } else if (data.getWard() == "") {
+            return customerRepository.getAll2(data.getProvince(), data.getDistrict(), data.getDateStart(), data.getDateEnd());
+        } else {
+            return customerRepository.getAll3(data.getProvince(), data.getDistrict(), data.getWard(), data.getDateStart(), data.getDateEnd());
+        }
     }
 }

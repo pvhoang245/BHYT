@@ -25,7 +25,7 @@ public interface CustomerRepository extends JpaRepository<Customer,Long> {
 
 //    @Query(" SELECT e FROM Customer e WHERE  (e.status='Chưa hoàn thành' AND (''=:province OR e.province = :province) AND (''=:district OR e.district = :district) AND (''=:ward OR e.ward = :ward) AND (''=:dateStart OR e.dateStart >= :dateStart) AND (''=:dateEnd OR e.dateStart <= :dateEnd)) ")
 //    List<Customer> reportNotComplete(String province, String district, String ward, Date dateStart, Date dateEnd);
-    @Query(" SELECT e FROM Customer e WHERE  (e.status='Đã hoàn thành'  AND e.dateStart >= :dateStart AND e.dateStart <= :dateEnd) ")
+    @Query(" SELECT e FROM Customer e WHERE  (e.status='Chưa hoàn thành'  AND e.dateStart >= :dateStart AND e.dateStart <= :dateEnd) ")
     List<Customer> reportNotComplete0(Date dateStart, Date dateEnd);
     @Query(" SELECT e FROM Customer e WHERE  (e.status='Chưa hoàn thành' AND e.province = :province AND  e.dateStart >= :dateStart AND e.dateStart <= :dateEnd) ")
     List<Customer> reportNotComplete1(String province, Date dateStart, Date dateEnd);
@@ -33,5 +33,14 @@ public interface CustomerRepository extends JpaRepository<Customer,Long> {
     List<Customer> reportNotComplete2(String province, String district,  Date dateStart, Date dateEnd);
     @Query(" SELECT e FROM Customer e WHERE  (e.status='Chưa hoàn thành' AND e.province = :province AND e.district = :district AND e.ward = :ward AND e.dateStart >= :dateStart AND e.dateStart <= :dateEnd) ")
     List<Customer> reportNotComplete3(String province, String district, String ward, Date dateStart, Date dateEnd);
+
+    @Query(" SELECT e FROM Customer e WHERE  (e.dateStart >= :dateStart AND e.dateStart <= :dateEnd) ")
+    List<Customer> getAll0(Date dateStart, Date dateEnd);
+    @Query(" SELECT e FROM Customer e WHERE  (e.province = :province AND  e.dateStart >= :dateStart AND e.dateStart <= :dateEnd) ")
+    List<Customer> getAll1(String province, Date dateStart, Date dateEnd);
+    @Query(" SELECT e FROM Customer e WHERE  (e.province = :province AND e.district = :district AND e.dateStart >= :dateStart AND e.dateStart <= :dateEnd) ")
+    List<Customer> getAll2(String province, String district,  Date dateStart, Date dateEnd);
+    @Query(" SELECT e FROM Customer e WHERE  (e.province = :province AND e.district = :district AND e.ward = :ward AND e.dateStart >= :dateStart AND e.dateStart <= :dateEnd) ")
+    List<Customer> getAll3(String province, String district, String ward, Date dateStart, Date dateEnd);
 }
 
