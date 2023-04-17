@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/app.css}" />
+  <script th:src="@{/js/app.js}"></script>
+</head>
+
+<body>
+<div class="container">
+  <div class="screen_report">
+    <div class="screen__content_report">
+      <form class="login_report">
+        <a th:href="@{/customers/home/report/reportbyyear}" class="button login__submit"> Bao cao doanh thu theo nam </a>
+        <a th:href="@{/customers/home/report/reportcomplete}" class="button login__submit"> Bao cao danh sach ca nhan da hoan thanh </a>
+        <a th:href="@{/customers/home/report/reportnotcomplete}" class="button login__submit"> Bao cao danh sach ca nhan chua hoan thanh </a>
+        <div class="social-login">
+          <div class="social-icons">
+            <a href="#" class="social-login__icon fab fa-instagram"></a>
+            <a href="#" class="social-login__icon fab fa-facebook"></a>
+            <a href="#" class="social-login__icon fab fa-twitter"></a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+
+  </div>
+</div>
+
+
+<script th:src="@{/js/app.js}"></script>
+</body>
+
+</html>

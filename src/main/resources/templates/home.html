@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/app.css}"/>
+</head>
+
+<body>
+<div class="container">
+  <div class="screen_report">
+    <div class="screen__content">
+      <h1 style="text-align: center;background-color: white;"> Trang chủ</h1>
+      <form class="login">
+        <a th:href = "@{/customers/home/viewlist}" class = "button login__submit"> Xem danh sách </a>
+        <a th:href = "@{/customers/home/report}" class = "button login__submit"> Báo cáo </a>
+        <a th:href = "@{/customers/home}" class = "button login__submit"> Cấu hình </a>
+        <div class="social-login">
+          <div class="social-icons">
+            <a href="#" class="social-login__icon fab fa-instagram"></a>
+            <a href="#" class="social-login__icon fab fa-facebook"></a>
+            <a href="#" class="social-login__icon fab fa-twitter"></a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>
